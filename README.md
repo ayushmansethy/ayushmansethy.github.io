@@ -1,2 +1,9 @@
-# ayushmansethy.github.io
-this is my git profile. and about my achivements
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm run deploy
+```
+
