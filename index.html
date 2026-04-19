@@ -3,27 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Random Profile</title>
+  <title>Ayushman Sethy - Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
-      background: #f4f4f4;
+      background: #f9f9f9;
       color: #333;
     }
     header {
-      background: #4CAF50;
+      background: linear-gradient(135deg, #2c3e50, #34495e);
       color: white;
-      padding: 20px;
+      padding: 40px;
       text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+    }
+    header p {
+      margin: 8px 0;
+      font-size: 1.2em;
+    }
+    nav {
+      background: #1abc9c;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
     }
     section {
       padding: 40px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
     }
     h2 {
-      color: #4CAF50;
+      color: #2c3e50;
+      border-bottom: 2px solid #1abc9c;
+      padding-bottom: 5px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      background: #ecf0f1;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .job, .project-card {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     .projects {
       display: flex;
@@ -31,69 +69,118 @@
       flex-wrap: wrap;
     }
     .project-card {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      flex: 1 1 250px;
+      flex: 1 1 280px;
+      text-align: center;
+    }
+    .project-card img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 10px;
     }
     footer {
-      background: #333;
+      background: #2c3e50;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       margin-top: 40px;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Jane Doe</h1>
-    <p>Web Developer | Designer | Tech Enthusiast</p>
+    <h1>Ayushman Sethy</h1>
+    <p>Java Backend / Data Integration Developer</p>
+    <p>Email: <a href="mailto:sayushman1511@outlook.com">sayushman1511@outlook.com</a> | Phone: +91 6371841215</p>
+    <p>Location: BTM Layout 1st Phase, Bangalore</p>
+    <p><a href="https://www.linkedin.com/in/ayushman-sethy-4b181931b" target="_blank">LinkedIn</a></p>
   </header>
 
-  <section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I’m Jane, a passionate developer who loves building clean, user-friendly websites and applications. I enjoy learning new technologies and solving creative problems.</p>
+    <p>Results-driven Backend/Integration Developer with 2.6 years of experience in building scalable, high-performance applications. Expertise in Java, Spring Boot, REST APIs, Microservices, and Hibernate. Skilled in Microsoft Azure, Docker, and cloud-native development with strong focus on performance, scalability, and reliability.</p>
   </section>
 
-  <section>
+  <section id="skills">
     <h2>Skills</h2>
     <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>React & Node.js</li>
-      <li>UI/UX Design</li>
-      <li>Responsive Web Development</li>
+      <li>Java (8, 17, 21), Python 3</li>
+      <li>Spring Boot, Spring Batch, Spring Security, Apache Camel</li>
+      <li>Databases: Oracle, MySQL, Couchbase, Redis</li>
+      <li>REST APIs, MVC Architecture</li>
+      <li>Azure Cloud, Kubernetes, Docker, RabbitMQ, Kafka</li>
+      <li>Version Control: Git, GitHub</li>
     </ul>
   </section>
 
-  <section>
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <div class="job">
+      <h3>B1 Consultant at QUINNOX (Associate Developer) | 2.6 years</h3>
+      <ul>
+        <li>Built scalable, high-performance applications using Java, Spring Boot, and Azure Cloud.</li>
+        <li>Led migration from IBM WebMethods to Spring Boot Microservices and Batch systems.</li>
+        <li>Designed Spring Batch pipelines deployed via Kubernetes Jobs and Tidal scheduling.</li>
+        <li>Contributed to enterprise systems including Store Chain Management and POS solutions.</li>
+        <li>Collaborated on backend architecture and integration strategies.</li>
+        <li>Trained new joiners and colleagues during technology transformation initiatives.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
       <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>A personal portfolio showcasing my work and skills.</p>
+        <img src="https://via.placeholder.com/300x200" alt="E-Commerce Migration">
+        <h3>E-Commerce Migration</h3>
+        <p>Modernized legacy IBM WebMethods system into Spring Boot Microservices with event-driven architecture.</p>
       </div>
       <div class="project-card">
-        <h3>Task Manager App</h3>
-        <p>A full-stack app to manage daily tasks efficiently.</p>
+        <img src="https://via.placeholder.com/300x200" alt="Data Pipeline">
+        <h3>Data Pipeline</h3>
+        <p>Implemented Spring Batch pipelines for large-scale product data processing with Kubernetes Jobs.</p>
       </div>
       <div class="project-card">
-        <h3>Design System</h3>
-        <p>A reusable component library for consistent UI design.</p>
+        <img src="https://via.placeholder.com/300x200" alt="POS System">
+        <h3>POS System</h3>
+        <p>Contributed to enterprise Point of Sale solutions with scalable backend integration patterns.</p>
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="education">
+    <h2>Education & Certifications</h2>
+    <ul>
+      <li>Masters in Computer Application (2024-26)</li>
+      <li>Bachelor’s in Computer Science (2021-2023)</li>
+      <li>Core Java (Udemy/Internshala)</li>
+      <li>Research Methodology (Coursera)</li>
+      <li>Azure Developer Associate (AZ-204)</li>
+    </ul>
+  </section>
+
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Email: jane.doe@example.com</p>
-    <p>LinkedIn: linkedin.com/in/janedoe</p>
-    <p>GitHub: github.com/janedoe</p>
+    <p>Email: <a href="mailto:sayushman1511@outlook.com">sayushman1511@outlook.com</a></p>
+    <p>Phone: +91 6371841215</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/ayushman-sethy-4b181931b" target="_blank">ayushman-sethy-4b181931b</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2026 Jane Doe. All rights reserved.</p>
+    <p>&copy; 2026 Ayushman Sethy. All rights reserved.</p>
   </footer>
 </body>
 </html>
