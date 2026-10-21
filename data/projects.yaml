@@ -1,0 +1,28 @@
+projects:
+  - name: Enterprise E-commerce Integration Platform
+    category: Professional experience
+    description: Backend services and integration flows connecting enterprise retail systems across cloud and on-premises environments.
+    impact: 1,500+ APIs documented | 500+ flows modernized
+    stack: [Java, Spring Boot, REST APIs, Kafka, RabbitMQ, Azure, AKS]
+    details:
+      - Migrated legacy middleware flows to maintainable Spring Boot services.
+      - Connected point-of-sale, inventory, customer, and store-management systems.
+      - Supported API transformation, validation, synchronization, and event-driven processing.
+  - name: High-volume Product Data Pipelines
+    category: Data processing
+    description: Scheduled batch workloads for product catalog and inventory synchronization.
+    impact: 20M+ transactional records per day
+    stack: [Spring Batch, Kubernetes Jobs, Tidal Workload Automation, Oracle SQL]
+    details:
+      - Designed batch jobs for large-volume transactional data processing.
+      - Automated scheduling and execution of recurring data workloads.
+      - Focused on dependable synchronization and operational visibility.
+  - name: Sales Analytics Dashboard
+    category: Freelance project
+    description: Sales dashboard for tracking orders, purchases, returns, exchanges, and replacements.
+    impact: Unified sales and customer data for reporting
+    stack: [WordPress, Python, FastAPI, Flask, Azure Container Apps, MySQL, MongoDB]
+    details:
+      - Built REST API functionality for sales tracking and dashboard data.
+      - Designed MySQL schemas for order and purchase records.
+      - Used MongoDB for user data storage and management.

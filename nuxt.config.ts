@@ -1,4 +1,5 @@
 import yaml from '@rollup/plugin-yaml'
+import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-10-21',
@@ -9,6 +10,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      baseURL: "/",
       htmlAttrs: { lang: 'en' },
       title: 'Ayushman Sethy | Software Engineer',
       meta: [
