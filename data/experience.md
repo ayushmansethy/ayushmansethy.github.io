@@ -1,0 +1,22 @@
+---
+roles:
+- company: Everforth Quinnox
+  title: Software Engineer (Senior Consultant)
+  client: Tractor Supply Company (TSC)
+  period: Add employment dates
+  location: Bengaluru, India
+  summary: Backend engineering and middleware integration for enterprise e-commerce systems.
+  highlights:
+  - Developed and documented 1,500+ REST APIs for enterprise integrations across cloud and on-premises environments.
+  - Modernized 500+ legacy IBM WebMethods integration flows into Spring Boot microservices and event-driven services.
+  - Built Spring Batch pipelines processing 20M+ transactional records per day, scheduled with Kubernetes Jobs and Tidal Workload Automation.
+  - Implemented customer lifecycle services and delta updates to synchronize customer data across 11 selling channels.
+  - Integrated POS, Backroom Inventory, Store Chain Management, and Customer Management systems using REST APIs and messaging patterns.
+  - Implemented OAuth 2.0 and username/password authentication with Spring Security, contributing to a reported 70% reduction in security vulnerability tickets.
+  - Supported containerized deployments and CI/CD workflows using Azure, AKS, Docker, and GitHub Actions.
+  - Used Dynatrace and production monitoring practices to support reliable services during high-volume retail periods.
+---
+
+# Experience
+
+This file contains the experience data used by the portfolio. Edit the frontmatter to update the site.

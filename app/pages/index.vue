@@ -1,9 +1,26 @@
 <script setup lang="ts">
 import { useSeoMeta } from 'nuxt/app'
-import profile from '~~/data/profile.yaml'
-import skillData from '~~/data/skills.yaml'
-import experienceData from '~~/data/experience.yaml'
-import projectData from '~~/data/projects.yaml'
+import { load as parseYaml } from 'js-yaml'
+
+// Markdown files use YAML frontmatter for structured portfolio data.
+const markdownFiles = import.meta.glob('../../data/*.md', { query: '?raw', import: 'default', eager: true }) as Record<string, string>
+function readMarkdownData<T>(fileName: string): T {
+  const entry = Object.entries(markdownFiles).find(([path]) => path.endsWith(`/${fileName}.md`))
+  if (!entry) throw new Error(`Missing portfolio content: ${fileName}.md`)
+  const match = entry[1].match(/^---\s*\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/)
+  if (!match) throw new Error(`Missing YAML frontmatter in ${fileName}.md`)
+  return parseYaml(match[1]) as T
+}
+
+interface Profile { name: string; role: string; location: string; headline: string; summary: string; email: string; phone: string; linkedin: string; github: string; resumePath: string; availability: string }
+interface SkillData { groups: Array<{ title: string; items: string[] }> }
+interface ExperienceData { roles: Array<{ company: string; title: string; client: string; period: string; location: string; summary: string; highlights: string[] }> }
+interface ProjectData { projects: Array<{ name: string; category: string; description: string; impact: string; stack: string[]; details: string[] }> }
+
+const profile = readMarkdownData<Profile>('profile')
+const skillData = readMarkdownData<SkillData>('skills')
+const experienceData = readMarkdownData<ExperienceData>('experience')
+const projectData = readMarkdownData<ProjectData>('projects')
 
 useSeoMeta({
   title: `${profile.name} | ${profile.role}`,
@@ -115,6 +132,6 @@ const emailHref = `mailto:${profile.email}?subject=${encodeURIComponent('Portfol
       </section>
     </main>
 
-    <footer class="footer section-wrap"><a class="wordmark" href="#home">AS<span>.</span></a><p>Designed & built with Nuxt · Content powered by YAML</p><a href="#home">Back to top ↑</a></footer>
+    <footer class="footer section-wrap"><a class="wordmark" href="#home">AS<span>.</span></a><p>Designed & built with Nuxt · Content powered by Markdown</p><a href="#home">Back to top ↑</a></footer>
   </div>
 </template>

@@ -1,13 +1,9 @@
-import yaml from '@rollup/plugin-yaml'
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-10-21',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-  vite: {
-    plugins: [yaml()]
-  },
   app: {
     head: {
       baseURL: "/",
